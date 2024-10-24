@@ -22,27 +22,6 @@ body {
     min-height: 100vh;
 }
 
-#page-wraperHellheim {
-    background: url(../images/backgrounds/rollingBarrel-bg1.png) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    width: 100%;
-    min-height: 100vh;
-}
-
-#page-wraperChrysalis {
-    background: url(../images/backgrounds/chrysalis-bg1.png) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    width: 100%;
-    min-height: 100vh;
-}
-
-
 /* Basic */
 
 body {

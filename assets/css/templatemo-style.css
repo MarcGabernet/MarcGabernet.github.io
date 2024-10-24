@@ -12,8 +12,8 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-#page-wraperHellheim {
-    background: url(../images/backgrounds/rollingBarrel-bg1.png) no-repeat center center fixed;
+#page-wraper{
+    background: url(../images/backgrounds/page-bg-minimalist-dark.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -22,8 +22,8 @@ body {
     min-height: 100vh;
 }
 
-#page-wraper{
-    background: url(../images/backgrounds/page-bg-minimalist-dark.jpg) no-repeat center center fixed;
+#page-wraperHellheim {
+    background: url(../images/backgrounds/rollingBarrel-bg1.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

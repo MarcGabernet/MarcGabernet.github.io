@@ -43,8 +43,8 @@ https://templatemo.com/tm-531-reflux
             <div class="author-content"><br>
               <h4 style=" font-size:22px; font-weight:bolder">MARC GABERNET RODRÍGUEZ</h4>
               <span style=" font-size:18px; font-style: normal;"><br>
-                - Video game developer<br>
-                - Mathematician
+                Video game developer<br>
+                Mathematician
               </span>
             </div>
             <nav class="main-nav" role="navigation">
@@ -124,8 +124,8 @@ https://templatemo.com/tm-531-reflux
                   <span style = "font-weight: bolder;"> Elios</span>, is set on a quest 
                   to recuse his wife,
                   <span style = "font-weight: bolder;"> Eury</span>,
-                   from the underground facilities she works in, where something has gone awry
-                   and the security robots have started to turn on everyone, there are even rumors
+                   from the underground cientific facilities she works in, where something has gone awry
+                   and the security robots have started to turn on everyone and there are even rumors
                    of strange creatures in the lower levels...
                 </p>
               </div>
@@ -138,7 +138,7 @@ https://templatemo.com/tm-531-reflux
                   <div class="right-image">
                     <div class="video-container">
                       <video controls>
-                        <source src="assets/images/movement.mp4" type="video/mp4" alt="player-movement">
+                        <source src="assets/videos/movement.mp4" type="video/mp4" alt="player-movement">
                       </video>
                     </div>
                     <figcaption style="font-size: 0.8em; color: #ffffff; margin-top: 5px;">
@@ -153,8 +153,12 @@ https://templatemo.com/tm-531-reflux
                     </h4>
                     <p>
                       Following my animation work in the engine, I implemented the first version
-                      of the player's movement animation. The player has 8 differnet movement animations,
-                      depending on a combination of the keys pressed and the direction the player is looking.
+                      of the 
+                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> 
+                        player's movement animation</span>. 
+                      The player has 8 differnet movement animations,
+                      depending on a combination of the keys pressed and the direction the player is looking
+                      I defined what animation has to play and its transition times.
                   </div>
                 </div>
               </div>
@@ -169,20 +173,27 @@ https://templatemo.com/tm-531-reflux
                       State machine
                     </h4>
                     <p>
-                      Created the timer system in the engine. 
-                      Implemented functions to calculate and use the delta time. Also integrated the option to
-                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> limit the framerate </span>
-                      and prevent screen tearing using 
-                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> Vsync </span>.<br>
-                      <br>
-                      Used ImGui to create a debugging screen for the Engine timer.
+                      Building upon my work on the player's animation i helped to 
+                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> 
+                        define the player's state machine</span>: 
+                      what states are connected with other states, what activates the transitions between states...<br><br>
+                      The player was split into 2 state machines: movement and attack (bottom ans top parts of the player).
+                      From the attack state machine I 
+                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> 
+                        defined the reload state</span>
+                      and its transitions and the 
+                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> 
+                        shooting behaviour</span>
+                      depending on the key input, incentivizing the player to adopt a more engaged 
+                      approach to their play.
+                    </p> 
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="right-image">
-                    <img src="assets/images/timer-debugger.png" alt="timer" />
+                    <img src="assets/images/state-machine-brainstorm.jpg" alt="state-machine" />
                     <figcaption style="font-size: 0.8em; color: #ffffff; margin-top: 5px;">
-                      Engine's timer debugging screen
+                      Brainstorming the state machine
                     </figcaption>
                   </div>
                 </div>
@@ -194,68 +205,185 @@ https://templatemo.com/tm-531-reflux
               <div class="row">
                 <div class="col-md-6">
                   <div class="right-image">
-                    <div class="video-container">
-                      <video controls>
-                        <source src="assets/images/animation_demo.mp4" type="video/mp4" alt="skinning">
-                      </video>
-                    </div>
+                    <img src="assets/images/level-design-blender.png" alt="level-design" />
                     <figcaption style="font-size: 0.8em; color: #ffffff; margin-top: 5px;">
-                      Skinning implemented in an example model
+                      Part of level 2 in Blender
                     </figcaption>
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <div class="right-text">
+                  <div class="right-text" >
                     <h4>
-                      Animations
+                      Level design
                     </h4>
                     <p>
-                      Worked on
-                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> importing the animation data </span>
-                      from GLTF files into the engine (timestamps, transforms, nodes, joints...).<br><br>
-                      Implemented the animation movement using timers (also being able to modify the
+                      Used <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> 
+                        Blender</span> to design the blockout and the level itself using 
                       <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> 
-                        animation speed</span>)
-                      and by passing the data to the shaders to apply the
-                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> skinning </span>
-                      (deforming the mesh according to bone transformation) of the model.
-
+                      custom assets</span> made by the artists in the project.<br>
+                      My approach was to design 
+                      an <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> 
+                      engaging and rich with detail</span> level that immerses the player in the experience.
+                      One of the goals was to give a sense of depth to the level to add complexity to the 
+                      environment. 
                   </div>
                 </div>
               </div>
             </div>
             
-            <!-- Part 3-2 -->
+            <!-- Part 4.0 -->
+            <div class="left-image-post">
+              <div class="row">
+                <div class="col-md-6">
+                </div>
+                <h4 style="margin-left: -70px; margin-top: 20px; margin-bottom: 0px;">
+                  Miscellaneous scripts
+                </h4>
+                <p>
+                  Following the philosophy used to design the levels, to make them 
+                  come to life, I 
+                  <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> 
+                    designed and implemented scripts</span>
+                  for props and objects
+                  to add more detail and make the experience much more
+                  <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> 
+                    responsive and captivating</span>.
+                </p>
+              </div>
+            </div>
+            
+            <!-- Part 4 -->
             <div class="left-image-post">
               <div class="row">
                 <div class="col-md-6">
                   <div class="left-text">
+                    <h4>
+                      Bulletholes
+                    </h4>
                     <p>
-                      Also created the 
-                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> animation component </span>
-                      and its interface in the inspector, where the states can be set up,
-                      the speed can be modified and the animation can be paused/played/restarted.<br><br>
-                      And finally integrated
-                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> 
-                        blending between animation states</span>, controlling the duration of the transitions.
+                      -
+                    </p>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="right-image">
                     <div class="video-container">
                       <video controls>
-                        <source src="assets/images/Blending.mp4" type="video/mp4" alt="blending">
+                        <source src="assets/videos/bulletholes.mp4" type="video/mp4" alt="bulletholes">
                       </video>
                     </div>
                     <figcaption style="font-size: 0.8em; color: #ffffff; margin-top: 5px;">
-                      Blending between diferent animation states
+                      Bulletholes apearing where the player's bullet hits
                     </figcaption>
                   </div>
                 </div>
               </div>
             </div>
 
+            <!-- Part 5 -->
+            <div class="left-image-post">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="right-image">
+                    <div class="video-container">
+                      <video controls>
+                        <source src="assets/videos/flickering-light.mp4" type="video/mp4" alt="flickering">
+                      </video>
+                    </div>
+                    <figcaption style="font-size: 0.8em; color: #ffffff; margin-top: 5px;">
+                      Flickering lights in Level 2
+                    </figcaption>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="right-text" >
+                    <h4>
+                      Flickering lights
+                    </h4>
+                    <p>
+                      -
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
+            <!-- Part 6 -->
+            <div class="left-image-post">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="left-text">
+                    <h4>
+                      Moving objects
+                    </h4>
+                    <p>
+                      -
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="right-image">
+                    <div class="video-container">
+                      <video controls>
+                        <source src="assets/videos/drones-2.mp4" type="video/mp4" alt="bulletholes">
+                      </video>
+                    </div>
+                    <figcaption style="font-size: 0.8em; color: #ffffff; margin-top: 5px;">
+                      Flying drones in the backround of Level 1
+                    </figcaption>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Part 6.5 -->
+            <div class="left-image-post">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="left-text">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="right-image">
+                    <div class="video-container">
+                      <video controls>
+                        <source src="assets/videos/drones-1.mp4" type="video/mp4" alt="bulletholes">
+                      </video>
+                    </div>
+                    <figcaption style="font-size: 0.8em; color: #ffffff; margin-top: 5px;">
+                      Small hovering robot
+                    </figcaption>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Part 7 -->
+            <div class="left-image-post">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="right-image">
+                    <div class="video-container">
+                      <video controls>
+                        <source src="assets/videos/security-cam.mp4" type="video/mp4" alt="security-cam">
+                      </video>
+                    </div>
+                    <figcaption style="font-size: 0.8em; color: #ffffff; margin-top: 5px;">
+                      Security camera following the player
+                    </figcaption>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="right-text" >
+                    <h4>
+                      Security cameras
+                    </h4>
+                    <p>
+                      -
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
             
           </div>
         </div>

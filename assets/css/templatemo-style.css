@@ -76,7 +76,7 @@ img {
 
 .image-button:hover img {
     transition: transform 0.3s; /* Adds a transition effect on hover */
-    filter: brightness(70%); /* Darken the image on hover */
+    filter: brightness(35%); /* Darken the image on hover */
     transform: scale(1.05);
 }
 

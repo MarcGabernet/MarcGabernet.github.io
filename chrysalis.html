@@ -243,11 +243,11 @@ https://templatemo.com/tm-531-reflux
                   Following the philosophy used to design the levels, to make them 
                   come to life, I 
                   <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> 
-                    designed and implemented scripts</span>
+                    designed and wrote scripts</span>
                   for props and objects
                   to add more detail and make the experience much more
                   <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> 
-                    responsive and captivating</span>.
+                    responsive and captivating</span>. These features are:
                 </p>
               </div>
             </div>
@@ -261,7 +261,22 @@ https://templatemo.com/tm-531-reflux
                       Bulletholes
                     </h4>
                     <p>
-                      -
+                      Implemented bulletholes for the player's shooting, which improves the 
+                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> 
+                        responsiveness and immersion</span>
+                      of the game.<br>
+                      This feature relies on setting up proper 
+                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> 
+                        colliders</span> 
+                      in the level, which I was in charge of, and calculating the normal vector of said 
+                      colliders to set the right rotation of the 
+                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> 
+                        decals</span> 
+                      used to project the bullets onto the models.<br>
+                      Aside from having a decal, the bullethole gameobject also consists of a
+                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> 
+                        particle system</span> 
+                      to simulate sparks coming from the hole.
                     </p>
                   </div>
                 </div>
@@ -301,7 +316,18 @@ https://templatemo.com/tm-531-reflux
                       Flickering lights
                     </h4>
                     <p>
-                      -
+                      Integrated flickering behaviour for the lights in the level. This feature
+                      enhances the experience by 
+                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> 
+                        supporting the asthetics</span> 
+                      of a broken down 
+                      thecnological facility.<br>
+                      It's implemeneted by defining intervals of time in a loop 
+                      (<span style="font-style: italic;">blackouts</span>)
+                      where the light is turned off. The script also disables the
+                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> 
+                        emissive factor</span> of the mesh renderer components it's attached to, 
+                        to archive the effect seen in the video example.
                     </p>
                   </div>
                 </div>
@@ -317,7 +343,7 @@ https://templatemo.com/tm-531-reflux
                       Moving objects
                     </h4>
                     <p>
-                      -
+                      - 
                     </p>
                   </div>
                 </div>
@@ -328,31 +354,15 @@ https://templatemo.com/tm-531-reflux
                         <source src="assets/videos/drones-2.mp4" type="video/mp4" alt="bulletholes">
                       </video>
                     </div>
-                    <figcaption style="font-size: 0.8em; color: #ffffff; margin-top: 5px;">
-                      Flying drones in the backround of Level 1
+                    <figcaption style="font-size: 0.8em; color: #ffffff; margin-top: 10px;margin-bottom: 10px;">
+                      Flying drones (top) and hovering robots (bottom)
                     </figcaption>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Part 6.5 -->
-            <div class="left-image-post">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="left-text">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="right-image">
                     <div class="video-container">
                       <video controls>
                         <source src="assets/videos/hovering-mini-robot.mp4" 
                         type="video/mp4" alt="mini-robot">
                       </video>
                     </div>
-                    <figcaption style="font-size: 0.8em; color: #ffffff; margin-top: 5px;">
-                      Small hovering robot
-                    </figcaption>
                   </div>
                 </div>
               </div>

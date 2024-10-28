@@ -58,7 +58,6 @@ h4 {
 
 img {
     width: 100%; /* Adjust as needed */
-    max-width: 300px; /* Set a max width for responsiveness */
     height: auto; /* Maintain aspect ratio */
     transition: transform 0.3s; /* Adds a transition effect on hover */
     overflow: hidden;
@@ -71,7 +70,6 @@ img {
 
 .image-button img {
     width: 100%; /* Adjust as needed */
-    max-width: 300px; /* Set a max width for responsiveness */
     height: auto; /* Maintain aspect ratio */
     transition: filter 0.3s; /* Transition for the image filter */
 }

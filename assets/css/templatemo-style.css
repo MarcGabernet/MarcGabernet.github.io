@@ -35,7 +35,10 @@ textarea {
     outline: none;
 }
 
-a,
+a {
+    display: inline-block; /* Makes the anchor tag behave like a block-level element */
+}
+
 a:hover {
     text-decoration: none;
 }
@@ -54,8 +57,47 @@ h4 {
 }
 
 img {
-    width: 100%;
+    width: 100%; /* Adjust as needed */
+    max-width: 300px; /* Set a max width for responsiveness */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s; /* Adds a transition effect on hover */
     overflow: hidden;
+}
+
+.image-button {
+    position: relative; /* Positioning for the overlay */
+    display: inline-block; /* Makes the div fit the image size */
+}
+
+.image-button img {
+    width: 100%; /* Adjust as needed */
+    max-width: 300px; /* Set a max width for responsiveness */
+    height: auto; /* Maintain aspect ratio */
+    transition: filter 0.3s; /* Transition for the image filter */
+}
+
+.image-button:hover img {
+    transition: transform 0.3s; /* Adds a transition effect on hover */
+    filter: brightness(70%); /* Darken the image on hover */
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute; /* Position the text on top of the image */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset to truly center */
+    color: white; /* Text color */
+    font-size: 20px; /* Adjust size as needed */
+    text-align: center; /* Center the text */
+    visibility: hidden; /* Hide the text initially */
+    opacity: 0; /* Hide with opacity */
+    transition: visibility 0s, opacity 0.3s linear; /* Smooth transition for visibility */
+}
+
+.image-button:hover .overlay {
+    visibility: visible; /* Show text on hover */
+    opacity: 1; /* Fade in */
 }
 
 ul {
@@ -364,6 +406,24 @@ button:hover {
 
 /* Left & Right Post */
 
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+}
+
+.video-container video,
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .right-image-post {
     margin-top: 20px;
     margin-bottom: -30px;
@@ -378,12 +438,15 @@ button:hover {
 }
 
 .left-image img,
-.right-image img {
-    border-radius: 10px;
+.right-image img,
+.right-image video,
+.right-image video{
+    border-radius: 5px;
 }
 
 .right-image-post h4,
 .left-image-post h4 {
+    font-size: larger;
     margin-top: 30px;
 }
 

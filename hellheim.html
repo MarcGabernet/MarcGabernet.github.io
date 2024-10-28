@@ -113,15 +113,20 @@ https://templatemo.com/tm-531-reflux
             <!-- Part 0 -->
             <div class="right-image-post">
               <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-6">
                 </div>
-                <h4>
-                  Shaders
+                <h4 style="text-align: center;">
+                  Set-up
                 </h4>
                 <p>
-                  Custom-made game engine built in Custom-made game engine built in
-                  Custom-made game engine built in Custom-made game engine built in
-                  Custom-made game engine built in Custom-made game engine built in
+                  The initial set-up of the engine was made individually,
+                  using OpenGL and the graphical user interface
+                  <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> Dear ImGui </span>.
+                  With this version of the engine basic camera movement was programmed and it was possible to 
+                  load 3D models 
+                  <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> (GLTF files) </span>.
+                  Here you can find this <a href="https://github.com/MarcGabernet/EngineMarc" target="_blank">
+                  first version</a> in a GitHub repository.
                 </p>
               </div>
             </div>
@@ -131,22 +136,25 @@ https://templatemo.com/tm-531-reflux
               <div class="row">
                 <div class="col-md-6">
                   <div class="right-image">
-                    <img src="assets/images/Engine.png" alt="" />
+                    <img src="assets/images/shadered_example.png" alt="SHADERed's UI" />
+                    <figcaption style="font-size: 0.8em; color: #ffffff; margin-top: 5px;">
+                      SHADERed's UI
+                    </figcaption>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="right-text">
+                    <h4>
+                      Shaders
+                    </h4>
                     <p>
-                      Custom-made game engine built in 
-                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> C++ </span>
-                      and <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> OpenGL </span>. 
-                      My work on the engine was varied as I worked on differnet topics: I worked on 
-                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> shaders </span>,
-                      the engine's 
-                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> timer </span>
-                      timer and the implementation of the
-                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> animation system</span>.
-                    </p>
+                      Developed the first version of 
+                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> physically based rendering </span>
+                      shaders in the engine using the 
+                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> Phong BRDF </span>
+                      (Bidirectional Reflectance Distribution Function) model. For this task I used the software
+                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> SHADERed </span>
+                      to edit the vertex and pixel shaders and have a more visual way of debugging.
                   </div>
                 </div>
               </div>
@@ -157,29 +165,97 @@ https://templatemo.com/tm-531-reflux
               <div class="row">
                 <div class="col-md-6">
                   <div class="left-text">
+                    <h4>
+                      Timers and framerate
+                    </h4>
                     <p>
-                      Top-down shoother made with the Hellheim Engine with a sci-fi
-                      aesthetic that emphasizes fast-paced combat. I focused on the player's
-                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> 
-                        animations </span> 
-                      and
-                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> 
-                        state machine </span>
-                      as a programmer and I also worked as a  
-                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> 
-                        level designer </span>, planning the stucture of the levlels and
-                        bringing them to life by adding details and scripts for props.
+                      Created the timer system in the engine. 
+                      Implemented functions to calculate and use the delta time. Also integrated the option to
+                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> limit the framerate </span>
+                      and prevent screen tearing using 
+                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> Vsync </span>.<br>
+                      <br>
+                      Used ImGui to create a debugging screen for the Engine timer.
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="right-image">
-                    <img src="assets/images/Chrysalis.png" alt="" />
+                    <img src="assets/images/timer-debugger.png" alt="timer" />
+                    <figcaption style="font-size: 0.8em; color: #ffffff; margin-top: 5px;">
+                      Engine's timer debugging screen
+                    </figcaption>
                   </div>
                 </div>
               </div>
             </div>
 
+            <!-- Part 3 -->
+            <div class="left-image-post">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="right-image">
+                    <div class="video-container">
+                      <video controls>
+                        <source src="assets/images/animation_demo.mp4" type="video/mp4" alt="skinning">
+                      </video>
+                    </div>
+                    <figcaption style="font-size: 0.8em; color: #ffffff; margin-top: 5px;">
+                      Skinning implemented in an example model
+                    </figcaption>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="right-text">
+                    <h4>
+                      Animations
+                    </h4>
+                    <p>
+                      Worked on
+                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> importing the animation data </span>
+                      from GLTF files into the engine (timestamps, transforms, nodes, joints...).<br><br>
+                      Implemented the animation movement using timers (also being able to modify the
+                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> 
+                        animation speed </span>)
+                      and by passing the data to the shaders to apply the
+                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> skinning </span>
+                      (deforming the mesh according to bone transformation) of the model.
+
+                  </div>
+                </div>
+              </div>
+            </div>
             
+            <!-- Part 3-2 -->
+            <div class="left-image-post">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="left-text">
+                    <p>
+                      Also created the 
+                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> animation component </span>
+                      and its interface in the inspector.<br><br>
+                      And finally integrated 
+                      <span style="font-weight: bolder; font-size: medium; color: rgb(179, 73, 84)"> 
+                        blending between animation states </span>, controlling the duration of the transitions.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="right-image">
+                    <div class="video-container">
+                      <video controls>
+                        <source src="assets/images/Blending.mp4" type="video/mp4" alt="blending">
+                      </video>
+                    </div>
+                    <figcaption style="font-size: 0.8em; color: #ffffff; margin-top: 5px;">
+                      Blending between diferent animation states
+                    </figcaption>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
           </div>
         </div>
       </section>
@@ -220,7 +296,7 @@ https://templatemo.com/tm-531-reflux
       var checkSection = function checkSection() {
         $(".section").each(function() {
           var $this = $(this),
-            topEdge = $this.offset().top - 80,
+            topEdge =  $this.offset().top - 80,
             bottomEdge = topEdge + $this.height(),
             wScroll = $(window).scrollTop();
           if (topEdge < wScroll && bottomEdge > wScroll) {
